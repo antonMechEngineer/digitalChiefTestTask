@@ -15,7 +15,6 @@ public class DepartmentService {
 
     public DepartmentRes getDepartment(Integer id){
         Department department = departmentsRepository.findById(id).orElseThrow();
-        System.out.println(department.getWorkers());
         return new DepartmentRes(department);
     }
 
