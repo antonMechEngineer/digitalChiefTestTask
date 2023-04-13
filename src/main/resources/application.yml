@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  tomcat:
+    mbeanregistry:
+      enabled: true
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    open-in-view: true
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    show-sql: false
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost/postgres
+    username: postgres
+    password: 12345
+    data: classpath:testData.sql
+    initialization-mode: always
+    tomcat:
+      initial-size: 10
+      max-active: 100
+
+
+
